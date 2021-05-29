@@ -1,0 +1,11 @@
+.accordion_desc{
+    @apply bg-gray-100 bg-opacity-50 rounded-b-lg pt-4 pl-4 pb-6;
+
+    p{
+        @apply text-xl text-left text-gray-800;
+    }
+
+    .code{
+        @apply bg-white font-bold mx-8 p-8 rounded-xl;
+    }
+}
