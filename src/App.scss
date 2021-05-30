@@ -1,29 +1,20 @@
 header{
-  @apply grid grid-cols-4 gap-4 bg-purple-900 md:grid-cols-8 h-20;
+  @apply grid grid-cols-4 gap-4 bg-prefered-black md:grid-cols-8 h-10v filter drop-shadow-xl;
 }
-
-.home{
-  @apply bg-gray-200 h-auto p-8 flex flex-col justify-center items-center md:p-16 ;
-}
-
-p{
-  @apply text-lg font-medium text-center text-purple-600 leading-tight pb-3 md:text-xl ;
-}
-
-textarea{
-  width: 50vw;
-  height: 40vh;
-  font-size: 18px;
-  font-weight: 500;
-  @apply border border-transparent rounded-xl ring-1 ring-gray-400 p-2;
-  
-  @apply focus:outline-none focus:ring-4 focus:ring-gray-500 focus:border-transparent;
+body{
+  @apply bg-prefered-black;
 }
 
 .docs{
-  @apply bg-gray-300 p-8 md:px-16;
+  @apply p-8 md:px-16 bg-prefered-black;
 
   h1{
     @apply text-4xl font-bold text-gray-800 text-center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home{
+    height: 80vh;
   }
 }

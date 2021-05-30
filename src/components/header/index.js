@@ -3,6 +3,6 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <header>Create an Endpoint </header>
+        <header className="col-span-full row-span-1"> </header>
     )
 }

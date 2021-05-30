@@ -11,25 +11,15 @@ import Button from "./common/Button";
 
 function App() {
   return (
-    // <div className="flex flex-col">
-    //   <Header />
-    //   <section className="home">
-    //     <p>
-    //       Describe the Structure of the JSON you would expect in the API's
-    //       response
-    //     </p>
-    //     <textarea
-    //       className="text-area text-area-focus bg-gray-100 resize-none m-auto"
-    //       id="input-textarea"
-    //       placeholder="Enter JSON here ( SEE THE DOCS for help )"
-    //     />
-    //     <Button text="GENERATE" />
-    //   </section>
+    // <div className="flex flex-col h-screen justify-between">
+    <div className="grid grid-cols-1 grid-rows-10 w-screen h-screen justify-between">
+      <Header />
+      
+      <Home />
 
-    //   <Docs/>
-    //   <Footer />
-    // </div>
-    <Home/>
+      {/* <Docs /> */}
+      {/* <Footer /> */}
+    </div>
   );
 }
 

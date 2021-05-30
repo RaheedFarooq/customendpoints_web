@@ -1,22 +1,32 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { saveDataToStore } from "../../api";
 import "./styles.scss";
-import { generateHash } from "./transformer";
-import LeftSidebar from '../left_sidebar';
+import { generateHash, jsonCreator } from "./transformer";
+import LeftSidebar from "../left_sidebar";
+import Button from "../../common/Button";
+import "./styles.scss";
+import { CODE_SAMPLES, UNCHANGED_JSON } from "../docs/constants";
 var encoder = require("object-encrypt-decrypt");
 
 export const Home = () => {
   const [val, setValue] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [url, setURL] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const history = useHistory();
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 2000);
+    }
+  }, [error]);
 
   const checkValueType = (value) => {
     try {
-      // setConverted('');
-      setError("");
+      setError(null);
       value = typeof value == "object" ? Object.keys(value) : JSON.parse(value);
       let hash = generateHash(value);
       generateUrl(hash, value);
@@ -35,68 +45,85 @@ export const Home = () => {
   };
 
   return (
-    <section className="grid sm:grid-col-1 md:grid-col-7 gap-2 h-full md:grid-flow-col">
-      <LeftSidebar />
-
-      <div className="col-span-1 md:col-span-5 flex justify-center items-center">
-        <div className="flex flex-col">
-          {url ? (
-            <>
-              <div className="break-all m-auto bg-white p-4 border-gray-500 font-bold text-blue-500 border-4 rounded-3xl text-3xl">
-                <a href={`${url}`} target="_blank" rel="noopener noreferrer">
-                  {`${url}`}
-                </a>
-              </div>
+    <section className="home col-span-full row-span-8 pt-4 lg:pt-8">
+      <>
+        <div className="code-area">
+          <div className="code-editor">
+            <textarea
+              ref={inputRef}
+              className=""
+              id="input-textarea"
+              placeholder="Enter JSON here ( SEE THE DOCS for help )"
+              value={val}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <div className="w-full h-auto">
+              {UNCHANGED_JSON.map((customType) => (
+                <button
+                  key={customType.heading}
+                  className="underline text-xs md:text-base tracking-wider mx-2 leading-normal font-normal cursor-pointer text-prefered-light"
+                  onClick={() => {
+                    try {
+                      let jsonString = jsonCreator(
+                        customType.code,
+                        val ? JSON.parse(val) : null
+                      );
+                      setValue(jsonString);
+                    } catch (e) {
+                      console.log("caught an error");
+                      setError(
+                        "Oops! Please make sure the text currently in the editor below is in correct JSON Format"
+                      );
+                    }
+                  }}
+                >
+                  {customType.heading}{" "}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="code-options-area">
+            <p className="col-span-full">
+              {" "}
+              You can create your JSON using the options below
+            </p>
+            {CODE_SAMPLES.map((dataType) => (
               <button
-                className=" my-2 py-2 bg-green-500 shadow-md focus:outline-none hover:bg-green-600 focus:ring-2 focus:ring-opacity-50 rounded-md text-gray-50 w-3/6 m-auto"
-                type="button"
-                disabled={isLoading}
-                onClick={() => setURL("")}
-              >
-                GO BACK
-              </button>
-            </>
-          ) : (
-            <>
-            <button
-                className=" my-2 py-2 bg-gray-700 shadow-md focus:outline-none hover:bg-gray-600 focus:ring-2 focus:ring-opacity-50 rounded-md text-white w-2/6 self-end"
-                type="button"
-                disabled={isLoading}
-                onClick={() =>window.open("/docs", "_blank")}
-              >
-                SEE THE DOCS
-              </button>
-              <textarea
-                className="text-area text-area-focus bg-gray-100 resize-none m-auto"
-                id="input-textarea"
-                placeholder="Enter your JSON ( SEE THE DOCS for help )"
-                value={val}
-                onChange={(e) => setValue(e.target.value)}
-              />
-              <button
-                className=" my-2 py-2 bg-green-500 shadow-md focus:outline-none hover:bg-green-600 focus:ring-2 focus:ring-opacity-50 rounded-md text-gray-50 w-3/6 m-auto"
-                type="button"
-                disabled={isLoading}
+                key={dataType.heading}
+                className="code-buttons"
                 onClick={() => {
-                  checkValueType(val);
-                  setIsLoading(true);
+                  try {
+                    let jsonString = jsonCreator(
+                      dataType.code,
+                      val ? JSON.parse(val) : null
+                    );
+                    setValue(jsonString);
+                  } catch (e) {
+                    console.log("caught an error");
+                    setError(
+                      "Oops! Please make sure the text currently in the editor below is in correct JSON Format"
+                    );
+                  }
                 }}
               >
-                {isLoading ? "Please Wait" : "GENERATE"}
+                {dataType.heading}
               </button>
-              {url && (
-                <div className="w-3/6 break-all m-auto	">
-                  <a href={`${url}`} target="_blank" rel="noopener noreferrer">
-                    {`${url}`}
-                  </a>
-                </div>
-              )}
-            </>
-          )}
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* <div className="col-span-1  border-4 hidden md:block h-full break-normal"></div> */}
+        {error && (
+          <span className="absolute bg-red-800 text-prefered-white p-4 rounded-xl top-1">
+            {error}
+          </span>
+        )}
+        <Button
+          text="GENERATE"
+          onClick={() => {
+            checkValueType(val);
+            setIsLoading(true);
+          }}
+        />
+      </>
     </section>
   );
 };
