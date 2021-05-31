@@ -12,6 +12,14 @@ body{
     @apply text-4xl font-bold text-gray-800 text-center;
   }
 }
+// ************************
+.submit-button{
+  @apply bg-prefered-neon w-full lg:w-1/5 h-16 absolute bottom-0 md:right-0 ;
+  @apply focus:outline-none;
+}
+
+
+// ************************
 
 @media only screen and (max-width: 600px) {
   .home{

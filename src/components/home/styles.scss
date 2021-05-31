@@ -1,5 +1,5 @@
 .home{
-    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 lg:py-2 bg-prefered-black;
+    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 lg:py-2 bg-prefered-black h-full;
     // min-height: 90vh;
 
 p{
@@ -34,4 +34,12 @@ textarea{
     @apply bg-prefered-shade2 h-10 rounded-lg text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 col-span-2 lg:col-span-full	;
 }
 
+}
+
+.textarea{
+    font-weight: 400;
+    @apply border-b-2 lg:border-b-0 lg:border-r-2 border-prefered-light p-5 text-prefered-neon focus:outline-none;
+    @apply resize-none w-full lg:w-4/5 h-4/6 lg:h-full;
+    @apply text-sm md:text-base;
+    font-family: 'Source Code Pro', monospace;
 }

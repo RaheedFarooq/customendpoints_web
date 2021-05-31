@@ -11,8 +11,8 @@ module.exports = {
           shade1: '#3D8CC2',
           shade2: '#016CB6',
           shade3: '#014E83',
-          dark: '#002036',
-          black: '#112736'
+          dark: '#0C1026',
+          black: '#00010D'
         },
       },
       height: {

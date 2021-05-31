@@ -11,15 +11,35 @@ import Button from "./common/Button";
 
 function App() {
   return (
-    // <div className="flex flex-col h-screen justify-between">
-    <div className="grid grid-cols-1 grid-rows-10 w-screen h-screen justify-between">
-      <Header />
-      
-      <Home />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <div className="main absolute inset-0	bg-prefered-black">
+            <div className="h-10p bg-prefered-dark"></div>
 
-      {/* <Docs /> */}
-      {/* <Footer /> */}
-    </div>
+            <div className="code-area h-90p ">
+              <textarea
+                className="textarea bg-prefered-black"
+                placeholder="Enter JSON here ( SEE THE DOCS for help )"
+              />
+            </div>
+            <button type="button" className="submit-button">
+              CREATE
+            </button>
+          </div>
+        </Route>
+
+        <Route exact path="/v2">
+          {/* <div className="flex flex-col h-screen justify-between"> */}
+          <div className="grid grid-cols-1 grid-rows-10 w-screen h-screen justify-between">
+            <Header />
+            <Home />
+            {/* <Docs /> */}
+            {/* <Footer /> */}
+          </div>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
