@@ -38,6 +38,12 @@ function App() {
             {/* <Footer /> */}
           </div>
         </Route>
+        <Route exact path="/v3">
+          <div className="grid grid-cols-1 grid-rows-10 w-screen h-screen justify-between">
+          <header className="h-full bg-prefered-black"></header>
+            <Home />
+          </div>
+        </Route>
       </Switch>
     </BrowserRouter>
   );

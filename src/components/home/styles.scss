@@ -2,12 +2,12 @@
     @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 lg:py-2 bg-prefered-black h-full;
     // min-height: 90vh;
 
-p{
-    @apply text-base font-medium text-center text-prefered-white leading-tight lg:text-lg w-full ;
+.para-text{
+    @apply text-sm mt-4 md:mt-2 font-medium text-center text-prefered-white leading-tight lg:text-lg w-full ;
 }
 
 .code-editor{
-    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0;
+    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0  flex flex-col justify-between;
 }
 
 .code-area{
@@ -18,20 +18,20 @@ p{
     height: auto;
 }
 
-textarea{
+.code-text{
     font-weight: 400;
     @apply border border-transparent rounded-xl p-0 bg-prefered-dark text-prefered-neon focus:outline-none;
-    @apply resize-none w-full h-90p;
+    @apply resize-none w-full h-4/5 sm:h-90p p-1;
     @apply text-xs sm:text-sm md:text-base;
     font-family: 'Source Code Pro', monospace;
 }
 
 .code-options-area{
-    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 pt-2 lg:pt-0 row-span-2 mt-2 lg:mt-4;
+    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:pt-0 mt-0 md:mt-2 lg:mt-4;
 }
 
 .code-buttons{
-    @apply bg-prefered-shade2 h-10 rounded-lg text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 col-span-2 lg:col-span-full	;
+    @apply bg-prefered-shade2 h-10 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 col-span-2 lg:col-span-full	;
 }
 
 }

@@ -51,7 +51,7 @@ export const Home = () => {
           <div className="code-editor">
             <textarea
               ref={inputRef}
-              className=""
+              className="code-text"
               id="input-textarea"
               placeholder="Enter JSON here ( SEE THE DOCS for help )"
               value={val}
@@ -83,8 +83,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="code-options-area">
-            <p className="col-span-full">
-              {" "}
+            <p className="col-span-full para-text">
               You can create your JSON using the options below
             </p>
             {CODE_SAMPLES.map((dataType) => (
