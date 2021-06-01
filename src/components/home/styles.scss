@@ -3,7 +3,7 @@
     // min-height: 90vh;
 
 .para-text{
-    @apply text-sm mt-4 md:mt-2 font-medium text-center text-prefered-white leading-tight lg:text-lg w-full ;
+    @apply text-sm mt-4 md:mt-0 font-medium text-center text-prefered-white leading-tight lg:text-lg w-full ;
 }
 
 .code-editor{
@@ -27,7 +27,7 @@
 }
 
 .code-options-area{
-    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:pt-0 mt-0 md:mt-2 lg:mt-4;
+    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:pt-0 mt-0 md:mt-2;
 }
 
 .code-buttons{

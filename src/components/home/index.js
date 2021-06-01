@@ -7,12 +7,13 @@ import LeftSidebar from "../left_sidebar";
 import Button from "../../common/Button";
 import "./styles.scss";
 import { CODE_SAMPLES, UNCHANGED_JSON } from "../docs/constants";
+import NewComp from "../newComp";
 var encoder = require("object-encrypt-decrypt");
 
 export const Home = () => {
   const [val, setValue] = useState("");
   const [error, setError] = useState(null);
-  const [url, setURL] = useState("");
+  const [url, setURL] = useState("https://customendpoints.herokuapp.com/data/kriH3o4fgOxOjJGjo1TO");
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
 
@@ -20,7 +21,7 @@ export const Home = () => {
     if (error) {
       setTimeout(() => {
         setError(null);
-      }, 2000);
+      }, 2500);
     }
   }, [error]);
 
@@ -46,6 +47,21 @@ export const Home = () => {
 
   return (
     <section className="home col-span-full row-span-8 pt-4 lg:pt-8">
+      {error && (
+          <span className="absolute bg-red-700 text-prefered-white p-4 rounded-xl top-1">
+            {error}
+          </span>
+        )}
+      {url ? (
+        <>
+        <div className="response-area" style={{height:'80vh'}}>
+          <NewComp url={url} onError={(error)=>setError(error) }/>
+        </div>
+        <Button
+          text="GO BACK"
+          onClick={() => setURL('')} />
+        </>
+      ) : (
       <>
         <div className="code-area">
           <div className="code-editor">
@@ -53,7 +69,7 @@ export const Home = () => {
               ref={inputRef}
               className="code-text"
               id="input-textarea"
-              placeholder="Enter JSON here ( SEE THE DOCS for help )"
+              placeholder="Enter JSON here"
               value={val}
               onChange={(e) => setValue(e.target.value)}
             />
@@ -110,11 +126,6 @@ export const Home = () => {
             ))}
           </div>
         </div>
-        {error && (
-          <span className="absolute bg-red-800 text-prefered-white p-4 rounded-xl top-1">
-            {error}
-          </span>
-        )}
         <Button
           text="GENERATE"
           onClick={() => {
@@ -123,6 +134,7 @@ export const Home = () => {
           }}
         />
       </>
+    )}
     </section>
   );
 };
