@@ -9,7 +9,7 @@ const NewComp = ({ url, onError }) => {
     (async function() {
       try {
         let response = {};
-        fetch(url)
+        // fetch(url)
         // .then(response => response.json())
         // .then((result) => {
         //     response = result;

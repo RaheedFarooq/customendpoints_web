@@ -13,7 +13,7 @@ var encoder = require("object-encrypt-decrypt");
 export const Home = () => {
   const [val, setValue] = useState("");
   const [error, setError] = useState(null);
-  const [url, setURL] = useState("https://customendpoints.herokuapp.com/data/kriH3o4fgOxOjJGjo1TO");
+  const [url, setURL] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
 

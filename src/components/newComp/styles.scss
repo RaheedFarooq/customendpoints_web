@@ -26,6 +26,11 @@
 .response{
     @apply response-gen-style;
     @apply rounded-xl mt-3;
+    word-wrap: break-word;
+
+    pre{
+        white-space: pre-wrap;
+    }
 }
 
 @media screen and (max-width: 650px) {

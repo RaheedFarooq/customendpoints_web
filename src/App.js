@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.jpg";
 import "./App.scss";
 import { useState } from "react";
 import { Header } from "./components/header";
@@ -42,10 +42,10 @@ function App() {
         <Route exact path="/v3">
           <div className="grid grid-cols-1 grid-rows-10 w-screen h-screen justify-between">
             <header className="bg-prefered-black grid grid-cols-6 gap-0 items-center">
-              <div className=" col-span-1 " style={{ height: "inherit" }}>
-                <img src={logo} style={{ height: "inherit" }} />
+              <div className=" col-span-4 sm:col-span-2 md:col-span-1 " style={{ height: "inherit",overflow: 'clip' , objectFit: 'cover' }}>
+                <img src={logo} style={{ width: "60%",  }} />
               </div>
-              <div className=" col-span-4 " style={{ height: "inherit" }}></div>
+              <div className=" col-span-1 sm:col-span-3 md:col-span-4 " style={{ height: "inherit" }}></div>
 
               {/* <button className="hidden md:block col-span-2 md:col-span-1 bg-prefered-shade2 mx-3 p-1">
                 Support Us

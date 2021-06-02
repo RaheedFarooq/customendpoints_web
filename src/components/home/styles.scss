@@ -1,5 +1,5 @@
 .home{
-    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 lg:py-2 bg-prefered-black h-full;
+    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 bg-prefered-black h-full;
     // min-height: 90vh;
 
 .para-text{
@@ -27,7 +27,7 @@
 }
 
 .code-options-area{
-    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:pt-0 mt-0 md:mt-2;
+    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:px-1 mt-0;
 }
 
 .code-buttons{
@@ -43,3 +43,23 @@
     @apply text-sm md:text-base;
     font-family: 'Source Code Pro', monospace;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-prefered-shade3 rounded-full;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-prefered-neon rounded-full
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-prefered-light cursor-auto;
+  }
