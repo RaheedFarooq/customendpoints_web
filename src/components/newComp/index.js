@@ -9,14 +9,6 @@ const NewComp = ({ url, onError }) => {
     (async function() {
       try {
         let response = {};
-        // fetch(url)
-        // .then(response => response.json())
-        // .then((result) => {
-        //     response = result;
-        //     console.log(result);
-        // }).catch((err) => {
-        //     onError(err);
-        // });
         response = await fetch(url).then(res=> res.json());
         if(responseRef && responseRef) responseRef.current.innerHTML = "<pre>" + JSON.stringify({response }, undefined, 2) + "</pre>";
         setApiResponse(JSON.stringify({response }, undefined, 2))
@@ -30,12 +22,13 @@ const NewComp = ({ url, onError }) => {
   return (
     <>
       <div className="url">
-        <p>YOUR API</p>
-        {url}
+        <p>HERE'S YOUR API</p>
+        <h6>{url}</h6>
       </div>
       <div className="response row-span-7 p-3 mb-3 h-full col-span-full">
-        <p>YOUR RESPONSE</p>
-        <span ref={responseRef}> </span>
+        <p>API RESPONSE</p>
+        <textarea value={apiResponse} ref={responseRef} readOnly className="text-xs sm:text-sm focus:outline-none w-full h-90p mt-2 bg-prefered-black border-none p-1"/>
+        {/* <span > </span> */}
       </div>
     </>
   );

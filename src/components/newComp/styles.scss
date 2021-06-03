@@ -21,6 +21,10 @@
     @apply response-gen-style;
     @apply col-span-full row-span-2 text-center;
     @apply rounded-3xl;
+    h6{
+        margin-top: 2px;
+        font-size:18px
+    }
 }
 
 .response{
@@ -35,6 +39,8 @@
 
 @media screen and (max-width: 650px) {
     .url {
-        font-size: 12px;
+        h6{
+            font-size:14px
+        }
     }
 }
