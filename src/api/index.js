@@ -11,7 +11,6 @@ var firebaseConfig = {
   measurementId: process.env.REACT_APP_measurementId
   };
   // Initialize Firebase
-  console.log(firebase.apps)
   if(!firebase.apps.length)  firebase.initializeApp(firebaseConfig);
 
   function initiateFirestore() {

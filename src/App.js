@@ -1,17 +1,19 @@
 import logo from "./logo.png";
 // import logo from "./mock-apis.png";
 import "./App.scss";
-import { useState } from "react";
+// import { useState } from "react";
 import { Header } from "./components/header";
-import { Footer } from "./components/footer";
+// import { Footer } from "./components/footer";
 import { Home } from "./components/home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Docs from "./components/docs";
-import NewComp from "./components/newComp";
-import Button from "./common/Button";
+// import Docs from "./components/docs";
+// import NewComp from "./components/newComp";
+// import Button from "./common/Button";
 
 function App() {
-  const [support, setSupport] = useState(false);
+  console.log("%c If you like this app, please give us a shout-out on LinkedIn","text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #41F9FB,0 0 70px #41F9FB,0 0 80px #41F9FB,0 0 100px #41F9FB,0 0 150px #41F9FB;padding:20px;font-size:30px;color:#fff;background:#000")
+
+  // const [support, setSupport] = useState(false);
   return (
     <BrowserRouter>
       <Switch>
@@ -26,7 +28,7 @@ function App() {
                   objectFit: "cover",
                 }}
               >
-                <img className="h-full m-auto mt-2" src={logo} />
+                <img className="h-full m-auto mt-2" src={logo} alt="logo" />
               </div>
               {/* <div
                 className=" col-span-1 sm:col-span-3 md:col-span-4 "

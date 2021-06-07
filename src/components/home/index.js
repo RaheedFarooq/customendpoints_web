@@ -1,20 +1,20 @@
 import { useRef, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { saveDataToStore } from "../../api";
 import "./styles.scss";
 import { generateHash, jsonCreator } from "./transformer";
-import LeftSidebar from "../left_sidebar";
+// import LeftSidebar from "../left_sidebar";
 import Button from "../../common/Button";
 import "./styles.scss";
 import { CODE_SAMPLES, UNCHANGED_JSON } from "../docs/constants";
 import NewComp from "../newComp";
-var encoder = require("object-encrypt-decrypt");
+// var encoder = require("object-encrypt-decrypt");
 
 export const Home = () => {
   const [val, setValue] = useState("");
   const [error, setError] = useState(null);
   const [url, setURL] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const Home = () => {
 
   const generateUrl = async (hash, object) => {
     let databaseId = await saveDataToStore({ hash, object });
-    setIsLoading(false);
+    // setIsLoading(false);
     setURL(`${process.env.REACT_APP_BACKEND_URL}/${databaseId}`);
   };
 
@@ -130,11 +130,11 @@ export const Home = () => {
           text="GENERATE"
           onClick={() => {
             checkValueType(val);
-            setIsLoading(true);
+            // setIsLoading(true);
           }}
         />
         <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon" >
-              Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" target="_blank"><strong> Raheed Farooq </strong></a>
+              Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" rel="noreferrer" target="_blank"><strong> Raheed Farooq </strong></a>
             </footer>
       </>
     )}

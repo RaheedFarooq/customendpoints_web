@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import Button from "../../common/Button";
+// import Button from "../../common/Button";
 import "./styles.scss";
 
 const NewComp = ({ url, onError }) => {
     const [apiResponse, setApiResponse] = useState('');
     let responseRef = useRef(null);
+    // eslint-disable-next-line
   useEffect(() => {
+    // eslint-disable-next-line
     (async function() {
       try {
         let response = {};
@@ -18,6 +20,7 @@ const NewComp = ({ url, onError }) => {
         );
       }
     })();
+    // eslint-disable-next-line
   }, []);
   return (
     <>
