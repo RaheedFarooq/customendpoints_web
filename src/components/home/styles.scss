@@ -31,7 +31,7 @@
 }
 
 .code-buttons{
-    @apply bg-prefered-shade2 h-10 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 col-span-2 lg:col-span-full	;
+    @apply bg-prefered-shade1 font-medium text-prefered-black h-10 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 hover:text-prefered-light col-span-2 lg:col-span-full	;
 }
 
 }

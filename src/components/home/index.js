@@ -46,7 +46,7 @@ export const Home = () => {
   };
 
   return (
-    <section className="home col-span-full row-span-8 pt-4 lg:pt-8">
+    <section className="home col-span-full row-span-9 pt-4 lg:pt-8">
       {error && (
           <span className="absolute bg-red-700 text-prefered-white p-4 rounded-xl top-1">
             {error}
@@ -133,6 +133,9 @@ export const Home = () => {
             setIsLoading(true);
           }}
         />
+        <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon" >
+              Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" target="_blank"><strong> Raheed Farooq </strong></a>
+            </footer>
       </>
     )}
     </section>
