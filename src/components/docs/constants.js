@@ -97,9 +97,10 @@ export const UNCHANGED_JSON = [
     code: {
       location: {
         type: "CUSTOM",
-        value: { lat: 67.944444, lng: 34.66666666 },
+        value: { lat: 37.227868, lng: -115.837870 },
         description:
-          "read-this! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+          // "read-this! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+          "NOTE! This will return a HARD-CODED value provided in the 'value' key above.  ",
       },
     },
   },
@@ -112,7 +113,7 @@ export const UNCHANGED_JSON = [
         type: "CUSTOM",
         value: "Sunday, 30 June 2021",
         description:
-          "read-this!! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+          "NOTE! This will return a HARD-CODED value provided in the 'value' key above.",
       },
     },
   },
@@ -125,7 +126,20 @@ export const UNCHANGED_JSON = [
         type: "CUSTOM",
         value: "My Custom Value",
         description:
-          "read-this!! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+          "NOTE! This will return a HARD-CODED value provided in the 'value' key above.",
+      },
+    },
+  },
+  {
+    heading: "Random",
+    description:
+      "You can pass in an array of values and let the API randomly return one of those elements", 
+    code: {
+      "random": {
+        type: "RANDOM",
+        value: ["Value 1","Value 2","Value 3","Value 4"],
+        description:
+          "Attention! You can pass in an array of values and let the API randomly return one of those",
       },
     },
   },

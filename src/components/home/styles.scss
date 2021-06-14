@@ -1,5 +1,5 @@
 .home{
-    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 bg-prefered-black h-full;
+    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 bg-prefered-black h-full relative;
     // min-height: 90vh;
 
 .para-text{
@@ -7,7 +7,7 @@
 }
 
 .code-editor{
-    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0  flex flex-col justify-between;
+    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0  flex flex-col justify-between relative;
 }
 
 .code-area{
@@ -15,7 +15,7 @@
     @apply focus-within:ring-4 focus-within:ring-gray-500 focus-within:border-transparent;
     @apply grid grid-cols-10 grid-rows-7 content-between lg:grid-rows-1 w-full p-1 md:p-2 lg:p-4;
     // min-height:70vh;
-    height: auto;
+    height: 70vh;
 }
 
 .code-text{
@@ -31,7 +31,7 @@
 }
 
 .code-buttons{
-    @apply bg-prefered-shade1 font-medium text-prefered-black h-10 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 hover:text-prefered-light col-span-2 lg:col-span-full	;
+    @apply bg-prefered-shade1 font-medium text-prefered-black h-9 sm:h-8 md:h-10 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 hover:text-prefered-light col-span-2 lg:col-span-full	;
 }
 
 }

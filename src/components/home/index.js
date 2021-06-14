@@ -65,6 +65,12 @@ export const Home = () => {
       <>
         <div className="code-area">
           <div className="code-editor">
+                <div
+                  className="absolute text-xs sm:text-base right-2 cursor-pointer text-prefered-light border-b-2 border-prefered-light tracking-wider m-2 md:m-0 leading-normal"
+                  onClick={()=>setValue('')}
+                >
+                  clear
+                 </div>
             <textarea
               ref={inputRef}
               className="code-text"
@@ -93,7 +99,7 @@ export const Home = () => {
                     }
                   }}
                 >
-                  {customType.heading}{" "}
+                  ✿ {customType.heading}{" "}
                 </button>
               ))}
             </div>
@@ -133,7 +139,7 @@ export const Home = () => {
             // setIsLoading(true);
           }}
         />
-        <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon" >
+        <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon absolute bottom-0" >
               Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" rel="noreferrer" target="_blank"><strong> Raheed Farooq </strong></a>
             </footer>
       </>
