@@ -29,8 +29,8 @@ const NewComp = ({ url, onError }) => {
         <h6>{url}</h6>
       </div>
       <div className="response row-span-7 p-3 mb-3 h-full col-span-full">
-        <p>API RESPONSE</p>
-        <textarea value={apiResponse} ref={responseRef} readOnly className="text-xs sm:text-sm focus:outline-none w-full h-90p mt-2 bg-prefered-black border-none p-1"/>
+        <p className="text-prefered-light">API RESPONSE</p>
+        <textarea value={apiResponse} ref={responseRef} readOnly className="text-xs sm:text-sm md:text-base focus:outline-none w-full h-90p mt-2 bg-prefered-black border-none p-1"/>
         {/* <span > </span> */}
       </div>
     </>

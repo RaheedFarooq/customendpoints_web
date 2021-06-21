@@ -22,7 +22,7 @@
     font-weight: 400;
     @apply border border-transparent rounded-xl p-0 bg-prefered-dark text-prefered-neon focus:outline-none;
     @apply resize-none w-full h-4/5 sm:h-90p p-1;
-    @apply text-xs sm:text-sm md:text-base;
+    @apply text-xs sm:text-sm md:text-base lg:text-lg;
     font-family: 'Source Code Pro', monospace;
 }
 

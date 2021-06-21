@@ -15,15 +15,18 @@
 
     p{
         @apply font-bold text-center underline pb-1;
+        font-size: 20px;
+        margin: 10px
     }
 }
 .url{
     @apply response-gen-style;
     @apply col-span-full row-span-2 text-center;
-    @apply rounded-3xl;
+    @apply rounded-3xl text-prefered-light;
     h6{
+        @apply text-prefered-white;
         margin-top: 2px;
-        font-size:18px
+        font-size:21px;
     }
 }
 

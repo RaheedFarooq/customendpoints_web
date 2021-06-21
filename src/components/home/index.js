@@ -14,11 +14,12 @@ export const Home = () => {
   const [val, setValue] = useState("");
   const [error, setError] = useState(null);
   const [url, setURL] = useState("");
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef(null);
 
   useEffect(() => {
     if (error) {
+      setIsLoading(false);
       setTimeout(() => {
         setError(null);
       }, 2500);
@@ -41,7 +42,7 @@ export const Home = () => {
 
   const generateUrl = async (hash, object) => {
     let databaseId = await saveDataToStore({ hash, object });
-    // setIsLoading(false);
+    setIsLoading(false);
     setURL(`${process.env.REACT_APP_BACKEND_URL}/${databaseId}`);
   };
 
@@ -75,7 +76,9 @@ export const Home = () => {
               ref={inputRef}
               className="code-text"
               id="input-textarea"
-              placeholder="Enter JSON here"
+              placeholder={`You can create your custom mock APIs by entering JSON here,
+or using the Buttons Available on the Right ( and Below )
+NOTE: The 'description' keys are not used to create the response, and should be deleted.`}
               value={val}
               onChange={(e) => setValue(e.target.value)}
             />
@@ -133,10 +136,11 @@ export const Home = () => {
           </div>
         </div>
         <Button
-          text="GENERATE"
+          isDisabled={isLoading}
+          text={isLoading ? 'Please Wait...' : `GENERATE`}
           onClick={() => {
             checkValueType(val);
-            // setIsLoading(true);
+            setIsLoading(true);
           }}
         />
         <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon absolute bottom-0" >
