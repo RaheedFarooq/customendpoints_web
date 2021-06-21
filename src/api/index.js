@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 require("firebase/firestore");
+require('firebase/analytics');
 
 var firebaseConfig = {
   apiKey: process.env.REACT_APP_apiKey,
@@ -13,7 +14,10 @@ var firebaseConfig = {
   // Initialize Firebase
   if(!firebase.apps.length)  firebase.initializeApp(firebaseConfig);
 
+
   function initiateFirestore() {
+    const analytics = firebase.analytics();
+    analytics.logEvent('notification_received');
     let db = firebase.firestore();
     return db;
   }
