@@ -55,7 +55,7 @@ export const Home = () => {
         )}
       {url ? (
         <>
-        <div className="response-area" style={{height:'80vh'}}>
+        <div className="response-area" style={{height:'73vh'}}>
           <NewComp url={url} onError={(error)=>setError(error) }/>
         </div>
         <Button
@@ -67,18 +67,17 @@ export const Home = () => {
         <div className="code-area">
           <div className="code-editor">
                 <div
-                  className="absolute text-xs sm:text-base right-2 cursor-pointer text-prefered-light border-b-2 border-prefered-light tracking-wider m-2 md:m-0 leading-normal"
+                  className="absolute text-xs sm:text-base -right-2 md:right-2 -top-2 md:top-0 cursor-pointer text-prefered-light border-b-2 border-prefered-light tracking-wider m-2 md:m-0 leading-normal"
                   onClick={()=>setValue('')}
                 >
-                  clear
+                  CLEAR
                  </div>
             <textarea
               ref={inputRef}
               className="code-text"
               id="input-textarea"
               placeholder={`You can create your custom mock APIs by entering JSON here,
-or using the Buttons Available on the Right ( and Below )
-NOTE: The 'description' keys are not used to create the response, and should be deleted.`}
+or using the Buttons Available on the Right or Below`}
               value={val}
               onChange={(e) => setValue(e.target.value)}
             />
@@ -143,9 +142,9 @@ NOTE: The 'description' keys are not used to create the response, and should be 
             setIsLoading(true);
           }}
         />
-        <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon absolute bottom-0" >
+        {/* <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon absolute bottom-0" >
               Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" rel="noreferrer" target="_blank"><strong> Raheed Farooq </strong></a>
-            </footer>
+            </footer> */}
       </>
     )}
     </section>

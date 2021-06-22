@@ -7,13 +7,13 @@
 }
 
 .code-editor{
-    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0  flex flex-col justify-between relative;
+    @apply col-span-full lg:col-span-8 w-full row-span-7 mt-0  flex flex-col justify-between relative;
 }
 
 .code-area{
     @apply  border border-transparent rounded-xl ring-1 ring-gray-400 p-2 bg-prefered-dark text-prefered-white;
     @apply focus-within:ring-4 focus-within:ring-gray-500 focus-within:border-transparent;
-    @apply grid grid-cols-10 grid-rows-7 content-between lg:grid-rows-1 w-full p-1 md:p-2 lg:p-4;
+    @apply grid grid-cols-10 grid-rows-9 content-between lg:grid-rows-1 w-full p-1 md:p-2 lg:p-4 relative;
     // min-height:70vh;
     height: 70vh;
 }
@@ -21,13 +21,14 @@
 .code-text{
     font-weight: 400;
     @apply border border-transparent rounded-xl p-0 bg-prefered-dark text-prefered-neon focus:outline-none;
-    @apply resize-none w-full h-4/5 sm:h-90p p-1;
+    @apply resize-none w-full h-90p p-1 pr-4 md:pr-1;
     @apply text-xs sm:text-sm md:text-base lg:text-lg;
     font-family: 'Source Code Pro', monospace;
 }
 
 .code-options-area{
     @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 row-span-2 pt-0 lg:px-1 mt-0;
+    @apply absolute lg:relative w-full bottom-6 lg:-bottom-1;
 }
 
 .code-buttons{
