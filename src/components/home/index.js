@@ -49,7 +49,7 @@ export const Home = () => {
   return (
     <section className="home col-span-full row-span-9 pt-4 lg:pt-8">
       {error && (
-          <span className="absolute bg-red-700 text-prefered-white p-4 rounded-xl top-1">
+          <span className="absolute bg-red-700 text-prefered-white p-4 rounded-xl top-1 z-20 text-sm">
             {error}
           </span>
         )}
