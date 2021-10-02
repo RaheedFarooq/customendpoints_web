@@ -13,7 +13,7 @@ const Accordion = ({ heading, description , code }) => {
       codeRef.current.innerHTML =
         "<pre>" + JSON.stringify(code, undefined, 2) + "</pre>";
     }
-  }, [open]);
+  }, [open, code]);
   return (
     <div className="my-2">
       {open ? (

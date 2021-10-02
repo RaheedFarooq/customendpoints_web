@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import Accordion from '../../common/Accordion';
 import { CODE_SAMPLES } from './constants';
 
@@ -13,9 +12,4 @@ const Docs = () => {
       </section>
     )
 }
-
-// Docs.propTypes = {
-
-// }
-
 export default Docs;
