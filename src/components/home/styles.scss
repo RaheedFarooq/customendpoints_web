@@ -1,45 +1,65 @@
-.home{
-    @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 lg:py-2 bg-prefered-black h-full;
-    // min-height: 90vh;
+.home {
+  @apply bg-gray-200 flex flex-col items-center px-2 lg:px-8 bg-prefered-black h-full relative;
+  // min-height: 90vh;
 
-p{
-    @apply text-base font-medium text-center text-prefered-white leading-tight lg:text-lg w-full ;
-}
+  .para-text {
+    @apply text-xs md:text-sm md:mt-0 font-medium text-center text-prefered-white leading-tight lg:text-lg w-full;
+  }
 
-.code-editor{
-    @apply col-span-full lg:col-span-8 w-full row-span-5 mt-0;
-}
+  .code-editor {
+    @apply col-span-full lg:col-span-8 w-full row-span-7 mt-0  flex flex-col justify-between relative;
+  }
 
-.code-area{
-    @apply  border border-transparent rounded-xl ring-1 ring-gray-400 p-2 bg-prefered-dark text-prefered-white;
+  .code-area {
+    @apply border border-transparent rounded-xl ring-1 ring-gray-400 p-2 bg-prefered-dark text-prefered-white;
     @apply focus-within:ring-4 focus-within:ring-gray-500 focus-within:border-transparent;
-    @apply grid grid-cols-10 grid-rows-7 content-between lg:grid-rows-1 w-full p-1 md:p-2 lg:p-4;
+    @apply grid grid-cols-10 grid-rows-9 content-between lg:grid-rows-1 w-full p-1 md:p-2 lg:p-4 relative;
     // min-height:70vh;
-    height: auto;
-}
+    height: 70vh;
+  }
 
-textarea{
+  .code-text {
     font-weight: 400;
     @apply border border-transparent rounded-xl p-0 bg-prefered-dark text-prefered-neon focus:outline-none;
-    @apply resize-none w-full h-90p;
-    @apply text-xs sm:text-sm md:text-base;
-    font-family: 'Source Code Pro', monospace;
+    @apply resize-none w-full h-90p p-1 pr-4 md:pr-1;
+    @apply text-xs sm:text-sm md:text-base lg:text-lg;
+    font-family: "Source Code Pro", monospace;
+  }
+
+  .code-options-area {
+    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-1 lg:gap-3 h-1/6 row-span-2 pt-0 lg:px-1 mt-0;
+    @apply absolute lg:relative w-full bottom-6 lg:-bottom-1;
+  }
+
+  .code-buttons {
+    @apply bg-prefered-shade1 font-medium text-prefered-black h-9 sm:h-8 md:h-9 rounded-lg text-xs sm:text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 hover:text-prefered-light col-span-2 lg:col-span-full;
+  }
 }
 
-.code-options-area{
-    @apply col-span-full lg:col-span-2 grid grid-cols-8 lg:grid-cols-5 gap-2 lg:gap-3 h-1/6 pt-2 lg:pt-0 row-span-2 mt-2 lg:mt-4;
+.textarea {
+  font-weight: 400;
+  @apply border-b-2 lg:border-b-0 lg:border-r-2 border-prefered-light p-5 text-prefered-neon focus:outline-none;
+  @apply resize-none w-full lg:w-4/5 h-4/6 lg:h-full;
+  @apply text-sm md:text-base;
+  font-family: "Source Code Pro", monospace;
 }
 
-.code-buttons{
-    @apply bg-prefered-shade2 h-10 rounded-lg text-sm lg:text-base focus:outline-none hover:bg-prefered-shade3 col-span-2 lg:col-span-full	;
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-prefered-shade3 rounded-full;
 }
 
-.textarea{
-    font-weight: 400;
-    @apply border-b-2 lg:border-b-0 lg:border-r-2 border-prefered-light p-5 text-prefered-neon focus:outline-none;
-    @apply resize-none w-full lg:w-4/5 h-4/6 lg:h-full;
-    @apply text-sm md:text-base;
-    font-family: 'Source Code Pro', monospace;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-prefered-neon rounded-full;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-prefered-light cursor-auto;
 }

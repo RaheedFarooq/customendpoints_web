@@ -57,7 +57,7 @@ export const CODE_SAMPLES = [
     },
   },
   {
-    heading: "Object Array",
+    heading: "Array of Objects",
     description: "THIS IS HOW A SAMPLE INTEGER DEFINITION WOULD LOOK LIKE",
     code: {
       aoo: {
@@ -91,44 +91,87 @@ export const UNCHANGED_JSON = [
     },
   },
   {
-    heading: "Custom [Location]",
-    description:
-      "You can define how many data objects you need your API to Return by defining a -length- attribute ",
+    heading: "Location",
+    description: "Generates a random pair of lat & lng",
     code: {
       location: {
-        type: "CUSTOM",
-        value: { lat: 67.944444, lng: 34.66666666 },
-        description:
-          "read-this! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+        type: "LOCATION",
       },
     },
   },
   {
-    heading: "Custom [Date/Time]",
-    description:
-      "You can define how many data objects you need your API to Return by defining a -length- attribute ",
+    heading: "DateTime",
+    description: "Generates a Random Date and Time",
     code: {
       date: {
-        type: "CUSTOM",
-        value: "Sunday, 30 June 2021",
-        description:
-          "read-this!! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+        type: "DATE",
       },
     },
   },
   {
-    heading: "Custom [Any]",
+    heading: "User - Fullname",
+    description: "Generates a Random Name",
+    code: {
+      name: {
+        type: "FULLNAME",
+      },
+    },
+  },
+  {
+    heading: "Email",
+    description: "Generates a Random Email",
+    code: {
+      email: {
+        type: "EMAIL",
+      },
+    },
+  },
+  {
+    heading: "Image",
+    description: "Generates a Random Email Address",
+    code: {
+      image: {
+        type: "IMAGE",
+        description: "replace IMAGE with AVATAR for user profilePictures",
+      },
+    },
+  },
+  {
+    heading: "Custom [Hard-Coded]",
     description:
       "You can define how many data objects you need your API to Return by defining a -length- attribute ",
     code: {
-      "custom": {
+      custom: {
         type: "CUSTOM",
         value: "My Custom Value",
         description:
-          "read-this!! This will return a Hard-Coded value defined in the 'value' Key. While we're working on Types like 'Date' 'Time' 'Location' etc, please use this if you can't find your required data type in the list of supported types ",
+          "NOTE! This will return a HARD-CODED value provided in the 'value' key above.",
+      },
+    },
+  },
+  {
+    heading: "Random",
+    description:
+      "You can pass in an array of values and let the API randomly return one of those elements",
+    code: {
+      random: {
+        type: "RANDOM",
+        value: ["Value 1", "Value 2", "Value 3", "Value 4"],
+        description:
+          "Attention! You can pass in an array of values and let the API randomly return one of those",
       },
     },
   },
 ];
 
-export const UNCHANGED_KEYS = ["length", "showTotalInMeta", "location", "date", "custom"];
+export const UNCHANGED_KEYS = [
+  "length",
+  "showTotalInMeta",
+  "location",
+  "date",
+  "custom",
+  "name",
+  "email",
+  "image",
+  "random",
+];

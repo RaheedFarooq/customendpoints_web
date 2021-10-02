@@ -7,6 +7,7 @@ const Accordion = ({ heading, description , code }) => {
   const accordionHeaderClass =
     "text-xl font-medium bg-white hover:bg-gray-100 hover:bg-opacity-50 duration-300 p-3 pl-4 rounded-lg flex justify-between text-2xl font-bold cursor-pointer";
   const codeRef = useRef(null);
+  // eslint-disable-next-line
   useEffect(() => {
     if (codeRef && codeRef.current && !codeRef.current.innerHTML) {
       codeRef.current.innerHTML =

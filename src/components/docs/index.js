@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Accordion from '../../common/Accordion';
 import { CODE_SAMPLES } from './constants';
 
-const Docs = ({ }) => {
+const Docs = () => {
     return (
         <section className="docs">
             <h1>Creating a JSON</h1>
@@ -14,8 +14,8 @@ const Docs = ({ }) => {
     )
 }
 
-Docs.propTypes = {
+// Docs.propTypes = {
 
-}
+// }
 
-export default Docs
+export default Docs;
