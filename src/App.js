@@ -11,9 +11,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import Button from "./common/Button";
 
 function App() {
-  console.log(`%c If you found this site useful, please give ME a shout-out on LinkedIn.
+  console.log(`%c If you found this site useful, or have some feedback/suggestions, please drop me a message on LinkedIn.
   https://www.linkedin.com/in/raheed-farooq/ 
-  THANKS :)`, "text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #41F9FB,0 0 70px #41F9FB,0 0 80px #41F9FB,0 0 100px #41F9FB,0 0 150px #41F9FB;padding:20px;font-size:30px;color:#fff;background:#000")
+  THANKS :)`, "text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #41F9FB,0 0 70px #41F9FB,0 0 80px #41F9FB,0 0 100px #41F9FB,0 0 150px #41F9FB;padding:20px;font-size:20px;color:#fff;background:#000")
 
   // const [support, setSupport] = useState(false);
   return (
