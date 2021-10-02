@@ -57,7 +57,7 @@ export const CODE_SAMPLES = [
     },
   },
   {
-    heading: "Object Array",
+    heading: "Array of Objects",
     description: "THIS IS HOW A SAMPLE INTEGER DEFINITION WOULD LOOK LIKE",
     code: {
       aoo: {
@@ -92,8 +92,7 @@ export const UNCHANGED_JSON = [
   },
   {
     heading: "Location",
-    description:
-      "Generates a random pair of lat & lng",
+    description: "Generates a random pair of lat & lng",
     code: {
       location: {
         type: "LOCATION",
@@ -102,42 +101,38 @@ export const UNCHANGED_JSON = [
   },
   {
     heading: "DateTime",
-    description:
-      "Generates a Random Date and Time",
+    description: "Generates a Random Date and Time",
     code: {
       date: {
-        type: "DATE"
+        type: "DATE",
       },
     },
   },
   {
     heading: "User - Fullname",
-    description:
-      "Generates a Random Name",
+    description: "Generates a Random Name",
     code: {
       name: {
-        type: "FULLNAME"
+        type: "FULLNAME",
       },
     },
   },
   {
     heading: "Email",
-    description:
-      "Generates a Random Email",
+    description: "Generates a Random Email",
     code: {
       email: {
-        type: "EMAIL"
+        type: "EMAIL",
       },
     },
   },
   {
     heading: "Image",
-    description:
-      "Generates a Random Email Address",
+    description: "Generates a Random Email Address",
     code: {
       image: {
         type: "IMAGE",
-        description: "replace IMAGE with AVATAR for user profilePictures"
+        description: "replace IMAGE with AVATAR for user profilePictures",
       },
     },
   },
@@ -146,7 +141,7 @@ export const UNCHANGED_JSON = [
     description:
       "You can define how many data objects you need your API to Return by defining a -length- attribute ",
     code: {
-      "custom": {
+      custom: {
         type: "CUSTOM",
         value: "My Custom Value",
         description:
@@ -159,7 +154,7 @@ export const UNCHANGED_JSON = [
     description:
       "You can pass in an array of values and let the API randomly return one of those elements",
     code: {
-      "random": {
+      random: {
         type: "RANDOM",
         value: ["Value 1", "Value 2", "Value 3", "Value 4"],
         description:
@@ -169,4 +164,14 @@ export const UNCHANGED_JSON = [
   },
 ];
 
-export const UNCHANGED_KEYS = ["length", "showTotalInMeta", "location", "date", "custom", "name", "email", "image", "random"];
+export const UNCHANGED_KEYS = [
+  "length",
+  "showTotalInMeta",
+  "location",
+  "date",
+  "custom",
+  "name",
+  "email",
+  "image",
+  "random",
+];
