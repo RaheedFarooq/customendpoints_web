@@ -64,7 +64,7 @@ function App() {
           </div>
         </Route>
       </Switch>
-      <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon absolute bottom-0" >
+      <footer className="w-screen bg-prefered-dark text-prefered-white text-center h-auto py-2 mt-2 tracking-wide shadow-md	ring-2 ring-prefered-neon fixed bottom-0" >
         Made with 💟 by <a href="https://www.linkedin.com/in/raheed-farooq/" rel="noreferrer" target="_blank"><strong> Raheed Farooq </strong></a>
       </footer>
     </BrowserRouter>
